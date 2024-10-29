@@ -3,6 +3,7 @@ package BackTracking;
 public class Nqueen {
 
 //changed void to boolean for only one solution
+
     public static boolean nQueens(char board[][], int row){
         
         //base
@@ -17,7 +18,7 @@ public class Nqueen {
         for(int j=0; j<board.length; j++){
             if(isSafe(board, row, j)){
                 board[row][j] = 'Q';
-              if(nQueens(board, row+1)){
+              if(nQueens(board, row+1)){//this if is for only one soln algo
                 return true;
                }
                 board[row][j] = 'x';
@@ -62,6 +63,9 @@ public class Nqueen {
             System.out.println();
         }
     }
+
+
+    //Main Function to print 
     public static void main(String[] args) {
         int n = 4;
 
